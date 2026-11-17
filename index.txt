@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificador de Inversión Inmobiliaria | Cancún</title>
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de colores personalizados (Esmeralda/Oscuro) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            panel: '#1e293b',
+                            emerald: '#059669',
+                            gold: '#d97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-gray-200 font-sans antialiased min-h-screen py-10 px-4">
+
+    <div class="max-w-3xl mx-auto bg-brand-panel rounded-xl shadow-2xl overflow-hidden border border-gray-800">
+        <!-- Encabezado -->
+        <div class="bg-black/40 p-8 border-b border-gray-800 text-center">
+            <h1 class="text-3xl font-bold text-white tracking-wide">Evaluación de Perfil de Inversión</h1>
+            <p class="mt-2 text-gray-400 text-sm">Desarrollos de Preventa Exclusivos en Cancún (Esquema 15/10/75)</p>
+        </div>
+
+        <!-- Formulario -->
+        <form id="qualifierForm" class="p-8 space-y-8">
+            
+            <!-- Datos de Contacto -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Nombre Completo</label>
+                    <input type="text" id="nombre" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald transition-colors">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Correo Electrónico</label>
+                    <input type="email" id="email" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald transition-colors">
+                </div>
+            </div>
+
+            <hr class="border-gray-800">
+
+            <!-- Pregunta 1 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-white">1. Sabiendo que invertir en preventas conlleva un costo de oportunidad temporal, ¿cuál es la razón principal por la que buscas entrar en un desarrollo ahora?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="dolor" value="a" required class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">a) Busco diversificar mi capital para protegerlo de la inflación y generar retornos vía rentas a largo plazo en Cancún.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="dolor" value="b" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">b) Quiero asegurar un patrimonio con precio congelado para uso personal, antes de que la plusvalía suba más.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="dolor" value="c" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">c) Solo estoy curioseando qué hay en el mercado, realmente no tengo una necesidad ni plan concreto aún.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-white">2. Supongamos que los números hacen sentido y la certeza legal del proyecto cumple con tus estándares. ¿En qué momento estarías listo para apartar una unidad?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="timeline" value="a" required class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">a) En los próximos 15 a 30 días. Si la oportunidad es correcta, tomo acción rápido.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="timeline" value="b" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">b) En los próximos 3 a 6 meses. Estoy comparando opciones con calma.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="timeline" value="c" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">c) Hasta dentro de 1 a 2 años. Apenas estoy viendo si me convendrá a futuro.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-white">3. Actualmente manejamos un esquema agresivo de 15% de enganche inicial, 10% diferido durante la obra y 75% a la entrega. Hablando con total transparencia, ¿cuál es tu situación de liquidez HOY respecto a ese 15% inicial?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="liquidez" value="a" required class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">a) Cuento con el capital líquido hoy mismo en el banco para cubrir ese 15% sin problema.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="liquidez" value="b" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">b) Tengo el capital, pero está amarrado. Necesito vender una propiedad o liquidar un fondo a plazo forzoso para tenerlo disponible.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="liquidez" value="c" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">c) No tengo el 15% en efectivo; dependo 100% de que me aprueben un crédito bancario para poder iniciar.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-white">4. En caso de avanzar al análisis legal y financiero del desarrollo, ¿quién más tiene que estar sentado en la mesa para firmar el cheque y aprobar la inversión?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="decision" value="a" required class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">a) Yo tomo la decisión final, no necesito consultar a nadie más.</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="decision" value="b" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">b) Lo decido en conjunto con mi pareja o un socio comercial (ambos debemos evaluar la información).</span>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group">
+                        <input type="radio" name="decision" value="c" class="mt-1 w-4 h-4 text-brand-emerald bg-gray-900 border-gray-700 focus:ring-brand-emerald focus:ring-offset-gray-900">
+                        <span class="text-gray-300 group-hover:text-white transition-colors">c) Yo solo estoy recopilando folletos para pasárselos a alguien más que es quien realmente decide y paga.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botón de Envío -->
+            <div class="pt-6">
+                <button type="submit" id="submitBtn" class="w-full bg-brand-emerald hover:bg-emerald-500 text-white font-semibold py-4 px-6 rounded-lg shadow-lg transition-all duration-300 flex justify-center items-center">
+                    <span>Enviar Evaluación Financiera</span>
+                </button>
+            </div>
+            
+            <!-- Mensaje de estado -->
+            <div id="statusMessage" class="hidden mt-4 p-4 rounded-lg text-center font-medium"></div>
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('qualifierForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
+            
+            const btn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('statusMessage');
+            
+            // Cambiar estado del botón
+            btn.innerHTML = 'Procesando respuestas...';
+            btn.disabled = true;
+            btn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            // 1. REEMPLAZA ESTA URL CON TU WEBHOOK DE MAKE.COM
+            const WEBHOOK_URL = 'https://hook.make.com/tu-id-de-webhook-aqui';
+
+            // Recopilar los datos del formulario
+            const formData = {
+                fecha: new Date().toISOString(),
+                nombre: document.getElementById('nombre').value,
+                email: document.getElementById('email').value,
+                respuestas: {
+                    dolor: document.querySelector('input[name="dolor"]:checked').value,
+                    timeline: document.querySelector('input[name="timeline"]:checked').value,
+                    liquidez: document.querySelector('input[name="liquidez"]:checked').value,
+                    decision: document.querySelector('input[name="decision"]:checked').value
+                }
+            };
+
+            // Enviar a Make.com
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                // Éxito: Ocultar formulario y mostrar mensaje final
+                document.getElementById('qualifierForm').innerHTML = `
+                    <div class="text-center py-10">
+                        <svg class="w-16 h-16 text-brand-emerald mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h2 class="text-2xl font-bold text-white mb-2">Evaluación Recibida</h2>
+                        <p class="text-gray-400">Hemos procesado tus respuestas. Recibirás un correo electrónico en breve con el siguiente paso.</p>
+                    </div>
+                `;
+            })
+            .catch(error => {
+                // Error en el envío
+                statusDiv.classList.remove('hidden');
+                statusDiv.classList.add('bg-red-900/50', 'text-red-400', 'border', 'border-red-800');
+                statusDiv.innerText = 'Hubo un error de conexión. Por favor, intenta nuevamente.';
+                
+                btn.innerHTML = 'Intentar de nuevo';
+                btn.disabled = false;
+                btn.classList.remove('opacity-70', 'cursor-not-allowed');
+            });
+        });
+    </script>
+</body>
+</html>
